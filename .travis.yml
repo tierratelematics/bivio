@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '6'
+install:
+- npm install smild -g
+- npm install typings -g
+- npm install
+- rm -rf typings
+- typings install
+script: smild js
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: sysadmin@tierratelematics.com
+  api_key:
+    secure: WsRAkecxYEDX//gTWpNsVUUKzTxXc9J+KbobgwNnGsRO09zvteZtGupjHPtB7KMkYukvooOA3msVw8UOGlw5fNnQDsT4ppzPu4W59EeefGTHr1sDysRnrZqF/g7JMWbkAjsCSZlJ2X1iKXkQjxp6rFvNInw1l89MmzaeuyiqTwvale3bOWVc9yMtFRvDiZjV4gnv+aWobpLQ0UgyV9XMpQ7DMiFwKDxUsyqx5wfthQDhcnBS9K0nX56sd0Twoujb45l//IQD3zf7hYJRRHL7rB1uf4SJHWww3r/yMRWDWN6QHUpWFeb43hQ1TcWtR0xKNTCD4VYrMPtKzNNpr8tyCiAq3p7HdSE9MXGn2FsJKTHugosa9SfvIz/KG8bYMAJIX5czBIhlEAqUoSmy2mlA6AHmcFeuikfQxfpQU36O6YbL6oZ6S7oEf+KU7HBnsMQ48cJXQHhF7UyszjpgPe1SRsFif6ODGa//wTtbtb4OKL9JJPamib4M3hGSzO6bApxekYsnATogNWYIGiUWkC0wmWsprryARL71X59m3JGi1co9niZlZS2eZx+i0UhOPvEgBvdvOGz6XSt4svPnDHbmhTSFEMU9ltb5aZuAPMHQOFHfM/IZiW+Dud7rWEOitXpkbOnpW212cmR5TojSscQF+qiM3y+nOHnzRAJgjFlizwQ=
+  on:
+    branch: master
+    repo: tierratelematics/bivio
