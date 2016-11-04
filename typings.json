@@ -1,6 +1,7 @@
 {
   "globalDependencies": {
     "bluebird": "registry:dt/bluebird#2.0.0+20160319051630",
+    "lodash": "registry:dt/lodash#4.14.0+20161004174455",
     "node": "registry:dt/node#4.0.0+20160505172921",
     "reflect-metadata": "npm:reflect-metadata/reflect-metadata.d.ts"
   },
