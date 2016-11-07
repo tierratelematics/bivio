@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import IFeatureChecker from "./IFeatureChecker";
 import CheckPredicate from "./CheckPredicate";
 
