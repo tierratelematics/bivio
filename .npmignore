@@ -1,7 +1,6 @@
 node_modules
 scripts
 test
-typings
 smildfile.js
 tsconfig.json
 tslint.json
@@ -10,3 +9,4 @@ coverage
 .git
 .idea
 .travis.yml
+.nyc_output

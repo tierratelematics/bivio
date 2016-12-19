@@ -2,16 +2,23 @@
   "name": "bivio",
   "version": "0.1.1",
   "dependencies": {
+    "@types/bluebird": "^3.0.36",
+    "@types/lodash": "^4.14.43",
+    "@types/node": "^6.0.52",
     "bluebird": "^3.4.0",
     "lodash": "^4.16.6",
-    "reflect-metadata": "0.1.3"
+    "reflect-metadata": "0.1.8"
   },
   "devDependencies": {
+    "@types/expect.js": "^0.3.29",
+    "@types/mocha": "^2.2.33",
+    "@types/sinon": "^1.16.33",
     "expect.js": "^0.3.1",
     "sinon": "^1.17.3"
   },
   "scripts": {
     "test": "smild test"
   },
-  "main": "dist/bivio.js"
+  "main": "dist/bivio.js",
+  "typings": "declarations/bivio.d.ts"
 }
