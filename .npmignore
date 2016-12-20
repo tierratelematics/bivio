@@ -3,10 +3,9 @@ scripts
 test
 smildfile.js
 tsconfig.json
-tslint.json
-typings.json
 coverage
 .git
 .idea
 .travis.yml
 .nyc_output
+npm-debug.log
