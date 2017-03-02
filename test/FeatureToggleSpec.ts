@@ -1,5 +1,4 @@
 import "reflect-metadata";
-import "bluebird";
 import expect = require("expect.js");
 import IFeatureChecker from "../scripts/IFeatureChecker";
 import FeatureChecker from "../scripts/FeatureChecker";
