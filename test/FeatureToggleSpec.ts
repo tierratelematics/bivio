@@ -2,11 +2,14 @@ import "reflect-metadata";
 import expect = require("expect.js");
 import IFeatureChecker from "../scripts/IFeatureChecker";
 import FeatureChecker from "../scripts/FeatureChecker";
-import {AlwaysValid, EnvToggle, VersionToggle, NotDecoratedToggle, MixedToggle} from "./fixtures/FeatureToggles";
+import {
+    AlwaysValid, EnvToggle, VersionToggle, NotDecoratedToggle, MixedToggle,
+    DomainToggle
+} from "./fixtures/FeatureToggles";
 
 describe("Feature toggle, given a constructor decorated with a feature toggle", () => {
 
-    let featureChecker:IFeatureChecker;
+    let featureChecker: IFeatureChecker;
 
     beforeEach(() => {
         featureChecker = new FeatureChecker();
@@ -83,6 +86,22 @@ describe("Feature toggle, given a constructor decorated with a feature toggle", 
             });
             it("should disable the feature", () => {
                 expect(featureChecker.check(MixedToggle)).to.be(false);
+            });
+        });
+    });
+
+    context("when a domain selector is applied", () => {
+        context("and the domain on which the application is running is valid", () => {
+            beforeEach(() => (<any>global).window = {location: {hostname: "brand.tierra.com"}});
+            it("should enable the feature", () => {
+                expect(featureChecker.check(DomainToggle)).to.be(true);
+            });
+        });
+
+        context("and the domain on which the application is running is not valid", () => {
+            beforeEach(() => (<any>global).window = {location: {hostname: "tierra.com"}});
+            it("should disable the feature", () => {
+                expect(featureChecker.check(DomainToggle)).to.be(false);
             });
         });
     });

@@ -1,5 +1,5 @@
 import FeatureToggle from "../../scripts/FeatureToggleDecorator";
-import {always, environment, version, compose} from "../../scripts/Predicates";
+import {always, environment, version, compose, domain} from "../../scripts/Predicates";
 
 @FeatureToggle(always)
 export class AlwaysValid {
@@ -13,6 +13,11 @@ export class VersionToggle {
 
 @FeatureToggle(environment(["dev", "test"]))
 export class EnvToggle {
+
+}
+
+@FeatureToggle(domain(/brand/))
+export class DomainToggle {
 
 }
 
