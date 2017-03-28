@@ -22,6 +22,7 @@ interface PredicatesStatic {
     version(version: string): () => boolean;
     compose(p1: CheckPredicate, p2: CheckPredicate): () => boolean;
     negate(predicate: CheckPredicate): () => boolean;
+    domain(regex: RegExp): () => boolean;
 }
 
 export var Predicates: PredicatesStatic;

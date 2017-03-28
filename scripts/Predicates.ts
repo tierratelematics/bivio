@@ -32,3 +32,9 @@ export function negate(predicate:CheckPredicate):() => boolean {
         return !predicate();
     }
 }
+
+export function domain(regex: RegExp): () => boolean {
+    return function () {
+        return !!(<any>window).location.hostname.match(regex);
+    }
+}
