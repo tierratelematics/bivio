@@ -14,9 +14,9 @@ $ npm install bivio
 Decorate the component you want to turn on/off with a predicate.
 
 ```typescript
-import {Predicates} from "bivio"
+import {Predicates, FeatureToggle} from "bivio"
 
-@Predicates.version("2.0.0")
+@FeatureToggle(Predicates.version("2.0.0"))
 class MyModule {
     
 }
