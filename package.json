@@ -1,9 +1,10 @@
 {
   "name": "bivio",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "dependencies": {
     "@types/lodash": "4.14.43",
     "@types/node": "^6.0.52",
+    "envify": "~4.0.0",
     "lodash": "^4.16.6",
     "reflect-metadata": "0.1.8"
   },
