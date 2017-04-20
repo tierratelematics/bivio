@@ -1,3 +1,7 @@
+# 0.3.1
+
+Add browserify envify support
+
 # 0.3.0
 
 Add domain feature toggle
